@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px 
 
 # Read the dataset's CSV file
-data_car_sales = pd.read_csv(r'/Data_P Github Repo/Project_Car_Sales/vehicles_us.csv')
+data_car_sales = pd.read_csv('vehicles_us.csv')
 print(data_car_sales.head())
 
 # display the dataframe with Streamlit 
