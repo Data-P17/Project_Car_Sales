@@ -20,13 +20,6 @@ fig_hist = px.histogram(filtered_dcs, x="odometer", nbins=5)
 st.header("Good Condition Cars with Low Mileage")
 st.plotly_chart(fig_hist)
 
-# Histogram that shows the count of cars by their types, with checkbox control
-if color_by_condition:
-    fig_hist2 = px.histogram(data_car_sales, x='type', color='condition')
-else:
-    fig_hist2 = px.histogram(data_car_sales, x='type')
-st.header("Count of Cars by Vehicle Type and Condition")
-st.plotly_chart(fig_hist2)
 # histogram that shows the count of cars by their types
 fig_hist2 = px.histogram(data_car_sales, x='type')
 st.header("Count of Cars by Vehicle Type ")
