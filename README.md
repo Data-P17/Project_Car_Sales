@@ -1,4 +1,4 @@
-# Project_Car_Sales
+# Car Sales Analysis and Visualization
 
 The know how to building an interactive web apps from a beginners perspective. The step-by-step instructions
 
