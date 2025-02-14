@@ -23,16 +23,25 @@ Technologies Used:
 
 Data Description:
 The dataset contains information about car sales, including:
+
 •	model_year: The year the car model was manufactured.
+
 •	cylinders: The number of cylinders the vehicle's engine has.
+
 •	odometer: The number of miles the vehicle has been driven.
+
 •	condition: The condition of the vehicle (e.g., "good", "fair", "excellent").
+
 •	type: The type of car (e.g., sedan, SUV, truck).
+
 •	price: The price of the car. 
+
 •	model: the description of the model type (e.g., “bmw x5”, “ford f-150”, “Chrysler 200”)
 
 Sample Use Case:
-•	A user wants to see a histogram of vehicles in "good" condition with mileage under 30,000 miles. They can check the "Color by Condition" option to differentiate the cars based on their condition, allowing for a deeper understanding of how condition affects the distribution of mileage.
+•	A user wants to see a histogram of vehicles in "good" condition with mileage under 30,000 miles. 
+They can check the "Color by Condition" option to differentiate the cars based on their condition, 
+allowing for a deeper understanding of how condition affects the distribution of mileage.
 •	A car dealership wants to explore the distribution of vehicles by model year and engine type (cylinders) to understand which types of cars are most common in the market, and which may need to be priced competitively.
 •	
 
