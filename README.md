@@ -23,6 +23,7 @@ Technologies Used:
 
 Data Description:
   The dataset contains information about car sales, including:
+  
     •	model_year: The year the car model was manufactured.
     •	cylinders: The number of cylinders the vehicle's engine has.
     •	odometer: The number of miles the vehicle has been driven.
