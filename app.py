@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px 
 
 # Read the dataset's CSV file
-data_car_sales = pd.read_csv('../vehicles_us.csv')
+data_car_sales = pd.read_csv('vehicles_us.csv')
 print(data_car_sales.head())
 # Converting the floats and booleans to integers:
 # the 1 repersent yes for four wheel drive and the 0 represents the contrary.
