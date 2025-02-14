@@ -1,3 +1,4 @@
+Project Car Sales
 import pandas as pd
 import streamlit as st 
 import plotly.express as px 
@@ -61,3 +62,29 @@ fig_vmm = px.violin(data_car_sales, x='model', y='odometer', title="Mileage Dist
 fig_vmm.update_layout(width=900, height=600)
 
 st.plotly_chart(fig_vmm)
+# Exploring Vehicle Distribution by Model Year and Cylinders
+# Here’s the code to allow a user to filter cars by model year and cylinder type
+# Constants for filtering and titles
+PLOT_TITLE = "Vehicle Distribution by Model Year and Cylinders"
+MODEL_YEAR_RANGE = (2010, 2020)  # Default range for model years
+
+# User Inputs: Model Year Range Slider
+year_min, year_max = st.slider("Select Model Year Range", min_value=2000, max_value=2025, 
+                               value=MODEL_YEAR_RANGE, step=1)
+
+# User Input: Select Cylinders
+cylinder_type = st.selectbox("Select Number of Cylinders", options=[4, 6, 8], index=0)
+
+# Filter the dataset based on model year and cylinder type
+filtered_data = data_car_sales[(data_car_sales['model_year'] >= year_min) & 
+                               (data_car_sales['model_year'] <= year_max) &
+                               (data_car_sales['cylinders'] == cylinder_type)]
+
+# Create a bar chart to visualize the distribution of cars based on the filters
+fig_bar = px.histogram(filtered_data, x="model_year", nbins=15, 
+                       title=PLOT_TITLE, 
+                       labels={"model_year": "Model Year", "count": "Number of Cars"})
+
+# Show the plot
+st.header(PLOT_TITLE)
+st.plotly_chart(fig_bar)
