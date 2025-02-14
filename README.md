@@ -14,27 +14,21 @@ o	The data can be visualized by different conditions, allowing users to explore 
 
 
 Technologies Used:
-•	Pandas- python’s open-source library for data analysis
-•	Streamlit- an open-source app framework that helps create beautiful performant web app quickly with minimal code.
-•	plotly.express- is a high-level API for creating interactive and visually appealing figures.
-•	Altair- is a declarative statistical visualization library that creates meaningful, elegant, and effective visualizations with minimal code.
-•	Python: The primary language used for data analysis and building the application.
+  •	Pandas- python’s open-source library for data analysis
+  •	Streamlit- an open-source app framework that helps create beautiful performant web app quickly with minimal code.
+  •	plotly.express- is a high-level API for creating interactive and visually appealing figures.
+  •	Altair- is a declarative statistical visualization library that creates meaningful, elegant, and effective visualizations with minimal code.
+  •	Python: The primary language used for data analysis and building the application.
 
 
 Data Description:
-The dataset contains information about car sales, including:
-
-•	model_year: The year the car model was manufactured.
-
-•	cylinders: The number of cylinders the vehicle's engine has.
-
-•	odometer: The number of miles the vehicle has been driven.
-
-•	condition: The condition of the vehicle (e.g., "good", "fair", "excellent").
-
-•	type: The type of car (e.g., sedan, SUV, truck).
-
-•	price: The price of the car. 
+  The dataset contains information about car sales, including:
+    •	model_year: The year the car model was manufactured.
+    •	cylinders: The number of cylinders the vehicle's engine has.
+    •	odometer: The number of miles the vehicle has been driven.
+    •	condition: The condition of the vehicle (e.g., "good", "fair", "excellent").
+    •	type: The type of car (e.g., sedan, SUV, truck).
+    •	price: The price of the car. 
 
 •	model: the description of the model type (e.g., “bmw x5”, “ford f-150”, “Chrysler 200”)
 
