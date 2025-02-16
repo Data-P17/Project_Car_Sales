@@ -66,7 +66,7 @@ st.plotly_chart(fig_cmvy)
 # The relationship between condition and model_year
 fig_cmy = px.histogram(data_car_sales, x='model_year', color='condition')
 st.write('''
-         # Histogram of Condition vs Model_Year
+         # Condition vs Model_Year
         Users can use the histograms to select a vehicle based on their preferred condition and year.
          ''')
 st.plotly_chart(fig_cmy)
@@ -100,7 +100,7 @@ filtered_data = data_car_sales[(data_car_sales['model_year'] >= year_min) &
 
 # Create a bar chart to visualize the distribution of cars based on the filters
 fig_bar = px.histogram(filtered_data, x="model_year", nbins=15, 
-                       title=PLOT_TITLE, 
+                       title=PLOT_TITLE2, 
                        labels={"model_year": "Model Year", "count": "Number of Cars"})
 
 # Show the plot
