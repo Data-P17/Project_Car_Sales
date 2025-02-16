@@ -1,14 +1,15 @@
 # Car Sales Analysis and Visualization
 
 Car Sales Analysis and Visualization
+
 Project Overview:
 This project aims to provide an interactive analysis and visualization platform for a car sales dataset, with a focus on exploring vehicle attributes such as mileage, condition, and model year. The goal is to help users identify trends and patterns in the data, such as which cars are in good condition, have low mileage, or are priced competitively. The project utilizes Streamlit for interactive visualization and Plotly Express for dynamic plotting.
 
 Key Features:
 1.	Interactive Filtering: Users can filter the dataset based on various conditions, such as vehicle condition (e.g., "good", "fair") and mileage range (e.g., cars with mileage under 30,000 miles).
 2.	Data Visualization: 
-o	Histograms are generated to display distributions of vehicle attributes like mileage (odometer) and model year.
-o	The data can be visualized by different conditions, allowing users to explore how car condition influences pricing and mileage.
+    o	Histograms are generated to display distributions of vehicle attributes like mileage (odometer) and model year.
+    o	The data can be visualized by different conditions, allowing users to explore how car condition influences pricing and mileage.
 3.	Real-Time User Inputs: The Streamlit application allows users to interact with data through checkboxes and sliders, enabling them to customize the views and analyze specific segments of the car sales data.
 4.	Conditional Styling: Users can choose to color the plots by specific conditions (e.g., "Color by Condition" checkbox), offering deeper insights into how different factors like condition impact the overall distribution of attributes.
 
@@ -30,15 +31,14 @@ Data Description:
     •	condition: The condition of the vehicle (e.g., "good", "fair", "excellent").
     •	type: The type of car (e.g., sedan, SUV, truck).
     •	price: The price of the car. 
-
-•	model: the description of the model type (e.g., “bmw x5”, “ford f-150”, “Chrysler 200”)
+    •	model: the description of the model type (e.g., “bmw x5”, “ford f-150”, “Chrysler 200”)
 
 Sample Use Case:
 •	A user wants to see a histogram of vehicles in "good" condition with mileage under 30,000 miles. 
 They can check the "Color by Condition" option to differentiate the cars based on their condition, 
 allowing for a deeper understanding of how condition affects the distribution of mileage.
 •	A car dealership wants to explore the distribution of vehicles by model year and engine type (cylinders) to understand which types of cars are most common in the market, and which may need to be priced competitively.
-•	
+•	A user wants to view a scatter plot of vehicles, considering both mileage and year. This allows them to weigh the trade-off between selecting a newer or older car, with the option to prioritize mileage over year or vice versa. The graph helps users make an informed choice based on their preferences for vehicle age or condition.
 
 Project Structure:
 •	app.py: The main Streamlit app containing all the interactive widgets and visualizations.

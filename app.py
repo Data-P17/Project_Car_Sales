@@ -24,7 +24,10 @@ data_car_sales['odometer'] = data_car_sales[['odometer', 'model_year']].groupby(
 # display the dataframe with Streamlit 
 # creating a df header
 st.header("Car Sales")
-#diplay the df with streamlit
+st.write('''
+         The Dataframe for Newer and Order Vehicles 
+         ''')
+#display the df with streamlit
 st.dataframe(data_car_sales)
 # Constants for configurations and conditions
 CONDITION_GOOD = 'good'
@@ -45,21 +48,35 @@ fig_hist = px.histogram(filtered_dcs, x="odometer", nbins=NBINS)
 
 # Set the plot header and display the plot
 st.header("Good Condition Cars with Low Mileage")
+st.write('''
+         Users are able to view the histogram where vehicles under 30,000 miles are in good condition.
+         ''')
 st.plotly_chart(fig_hist)
 #Scatter plot of Car Mileage vs. Years
-fig_cmvy = px.scatter(data_car_sales, x="model_year", y="odometer", color="type", hover_data=["model", "paint_color"], title="Car Mileage vs Year")
+fig_cmvy = px.scatter(data_car_sales, x="model_year", y="odometer", color="type", hover_data=["model", "paint_color"])
 
+st.write('''
+         # Car Mileage vs Year
+         Users can view the scatter plot to identify vehicles that meet their preferred balance of mileage and/or year, helping them find options with negotiable characteristics.
+         ''')
 st.plotly_chart(fig_cmvy)
 # Histogram of Condition vs Model_year
 # The relationship between condition and model_year
 fig_cmy = px.histogram(data_car_sales, x='model_year', color='condition')
-st.header('Histogram of Condition vs Model_Year')
+st.write('''
+         # Histogram of Condition vs Model_Year
+        Users can use the histograms to select a vehicle based on their preferred condition and year.
+         ''')
 st.plotly_chart(fig_cmy)
-#volin plot of mileage by make
-fig_vmm = px.violin(data_car_sales, x='model', y='odometer', title="Mileage Distribution by Make", box=True, points="all", color='model')
+#violin plot of mileage by make
+fig_vmm = px.violin(data_car_sales, x='model', y='odometer', box=True, points="all", color='model')
 
 fig_vmm.update_layout(width=900, height=600)
 
+st. write('''
+          # Mileage Distribution by Make
+          Users can view a Violin plot to considering both mileage and vehicle model. This shows the best options of vehicles with lower mileage. 
+          ''')
 st.plotly_chart(fig_vmm)
 # Exploring Vehicle Distribution by Model Year and Cylinders
 # Here’s the code to allow a user to filter cars by model year and cylinder type
@@ -86,4 +103,7 @@ fig_bar = px.histogram(filtered_data, x="model_year", nbins=15,
 
 # Show the plot
 st.header(PLOT_TITLE)
+st.write('''
+         Users can use a plot chart to filter the vehicles by their year and its cylinder type. This assist in identifying a engine size relative to its year options. 
+         ''')
 st.plotly_chart(fig_bar)
