@@ -29,6 +29,7 @@ st.write('''
          ''')
 #display the df with streamlit
 st.dataframe(data_car_sales)
+
 # Constants for configurations and conditions
 CONDITION_GOOD = 'good'
 MILEAGE_THRESHOLD = 30000
@@ -47,11 +48,12 @@ filtered_dcs = data_car_sales[(data_car_sales['condition'] == CONDITION_GOOD) &
 fig_hist = px.histogram(filtered_dcs, x="odometer", nbins=NBINS)
 
 # Set the plot header and display the plot
-st.header("Good Condition Cars with Low Mileage")
+st.header(PLOT_TITLE)
 st.write('''
          Users are able to view the histogram where vehicles under 30,000 miles are in good condition.
          ''')
 st.plotly_chart(fig_hist)
+
 #Scatter plot of Car Mileage vs. Years
 fig_cmvy = px.scatter(data_car_sales, x="model_year", y="odometer", color="type", hover_data=["model", "paint_color"])
 
@@ -81,7 +83,7 @@ st.plotly_chart(fig_vmm)
 # Exploring Vehicle Distribution by Model Year and Cylinders
 # Here’s the code to allow a user to filter cars by model year and cylinder type
 # Constants for filtering and titles
-PLOT_TITLE = "Vehicle Distribution by Model Year and Cylinders"
+PLOT_TITLE2 = "Vehicle Distribution by Model Year and Cylinders"
 MODEL_YEAR_RANGE = (2010, 2020)  # Default range for model years
 
 # User Inputs: Model Year Range Slider
@@ -102,7 +104,7 @@ fig_bar = px.histogram(filtered_data, x="model_year", nbins=15,
                        labels={"model_year": "Model Year", "count": "Number of Cars"})
 
 # Show the plot
-st.header(PLOT_TITLE)
+st.header(PLOT_TITLE2)
 st.write('''
          Users can use a plot chart to filter the vehicles by their year and its cylinder type. This assist in identifying a engine size relative to its year options. 
          ''')
